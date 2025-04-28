@@ -16,7 +16,7 @@ const NavBar = () => {
       dispatch(removeUser());
       return navigate("/login");
     } catch (error) {
-      // Redirect to error page
+      console.log(error);
     }
   };
 
@@ -55,6 +55,9 @@ const NavBar = () => {
               </li>
               <li>
                 <Link to="/requests">Requests</Link>
+              </li>
+              <li>
+                <Link to="/premium">Premium</Link>
               </li>
               <li>
                 <a onClick={handleLogout}>Logout</a>
